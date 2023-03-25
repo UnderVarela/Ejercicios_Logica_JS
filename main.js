@@ -130,7 +130,9 @@ class Libro {
 // 7.- Calcula la letra de un DNI, pediremos el DNI por teclado y nos devolverá el DNI completo. Para calcular la letra, cogeremos el resto de dividir nuestro DNI entre 23, el resultado debe estar entre 0 y 22.
 // Haz un método donde según el resultado de la anterior fórmula busque en un array de caracteres la posición que corresponda a la letra.
 // Por ejemplo si escribimos: 32670089 nos devolverá: 32670089S
-// Esta es la tabla de caracteres:
+// El codigo divide entre 23 porque hay 23 letras diferentes que se pueden asignar a un número de DNI. 
+// Al dividir el número del DNI entre 23 y tomar el resto, se obtiene un número entre 0 y 22 que se utiliza para buscar la letra correspondiente en una cadena de caracteres. 
+// La letra correspondiente se encuentra en la posición del número obtenido en la cadena de caracteres.
 
 function calcularLetraDNI(dni) {
     const caracteres = "TRWAGMYFPDXBNJZSQVHLCKE";
@@ -142,6 +144,19 @@ function calcularLetraDNI(dni) {
   const dni = prompt("Introduce tu DNI sin letra:");
   const dniCompleto = calcularLetraDNI(dni);
   console.log(dniCompleto);
+
+// Codigo alternativo sin utilizar 'charAT' y cambiando los prompt y console.log por window dialog para que no lo haga por consola:
+
+function calcularLetraDNI(dni) {
+  const caracteres = "TRWAGMYFPDXBNJZSQVHLCKE";
+  const resto = dni % 23;
+  const letra = caracteres[resto];
+  return dni + letra;
+}
+
+const dni = window.prompt("Introduce tu DNI sin letra:");
+const dniCompleto = calcularLetraDNI(dni);
+window.alert(dniCompleto);
 
 //   Este código define una función llamada “calcularLetraDNI” que recibe un número de DNI y devuelve el DNI completo con la letra correspondiente. Para ello, se utiliza una cadena de caracteres que contiene las letras correspondientes a cada resto de la división entre 23. Luego se utiliza el método “charAt” para obtener la letra correspondiente al resto del DNI introducido.
   
