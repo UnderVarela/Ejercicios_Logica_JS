@@ -145,6 +145,11 @@ function calcularLetraDNI(dni) {
   const dniCompleto = calcularLetraDNI(dni);
   console.log(dniCompleto);
 
+// Este código define una función llamada “calcularLetraDNI” que recibe un número de DNI y devuelve el DNI completo con la letra correspondiente. Para ello, se utiliza una cadena de caracteres que contiene las letras correspondientes a cada resto de la división entre 23. 
+// Luego se utiliza el método “charAt” para obtener la letra correspondiente al resto del DNI introducido. 
+// Por último, se utiliza el método “prompt” para pedir al usuario que introduzca su DNI sin letra y se llama a la función “calcularLetraDNI” para obtener el DNI completo con la letra correspondiente. 
+// El resultado se muestra por consola.
+
 // Codigo alternativo sin utilizar 'charAT' y cambiando los prompt y console.log por window dialog para que no lo haga por consola:
 
 function calcularLetraDNI(dni) {
@@ -158,9 +163,7 @@ const dni = window.prompt("Introduce tu DNI sin letra:");
 const dniCompleto = calcularLetraDNI(dni);
 window.alert(dniCompleto);
 
-//   Este código define una función llamada “calcularLetraDNI” que recibe un número de DNI y devuelve el DNI completo con la letra correspondiente. Para ello, se utiliza una cadena de caracteres que contiene las letras correspondientes a cada resto de la división entre 23. Luego se utiliza el método “charAt” para obtener la letra correspondiente al resto del DNI introducido.
-  
-//   Por último, se utiliza el método “prompt” para pedir al usuario que introduzca su DNI sin letra y se llama a la función “calcularLetraDNI” para obtener el DNI completo con la letra correspondiente. El resultado se muestra por consola.
+
 
 
 // 8.- Ejercicio DOM basico: https://github.com/webferrol/js-basic-node-exercise
