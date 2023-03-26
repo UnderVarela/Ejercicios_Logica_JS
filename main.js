@@ -25,6 +25,9 @@ for (let i = 1; i < numeros.length; i++) {
 
 // Este código inicializa las variables `mayor` y `menor` con el primer elemento del array y luego utiliza un bucle `for` para comparar cada elemento del array con las variables `mayor` y `menor`. Si el elemento es mayor que `mayor`, se actualiza la variable `mayor`. Si el elemento es menor que `menor`, se actualiza la variable `menor`.
 
+
+
+
 // 2.- A partir de un array de números dado desordenarlos de alguna manera
 
 // Para desordenar un array en JavaScript, puedes crear una función personalizada como la que se muestra a continuación²:
@@ -51,6 +54,8 @@ function shuffle(array) {
 
 // Esta función utiliza el método `Math.random()` para generar un número aleatorio y el método `floor()` para redondear hacia abajo. Luego, utiliza un bucle while para recorrer el array y mezclar los elementos².
 
+
+
 // 3.- En un array de números aleatorios obtener los valores pares.
 
 const numeros = [1, 2, 3, 4, 5];
@@ -58,6 +63,21 @@ const pares = numeros.filter(numero => numero % 2 === 0);
 console.log(pares); // [2, 4]
 
 // En este ejemplo, se utiliza el método filter() para crear un nuevo array llamado pares que contiene todos los números pares del array original
+
+// Alternativa usando un bucle for, en lugar del metodo filter:
+var numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var pares = [];
+
+for (var i = 0; i < numeros.length; i++) {
+  if (numeros[i] % 2 === 0) {
+    pares.push(numeros[i]);
+  }
+}
+
+console.log(pares);
+
+
+
 
 // 4.- Cargar un array con números aleatorios y ordenarlos de mayor a menor.
 
@@ -71,6 +91,9 @@ const numerosOrdenados = numeros.sort((a, b) => b - a);
 console.log(numerosOrdenados); // [ 98, 90, 87, 78, 56, 45, 34, 23, 12, 1 ]
 
 // En este ejemplo se utiliza una función de comparación para ordenar los elementos del array de mayor a menor.
+
+
+
 
 // 5.- Crear una función llamada “hacerDescuento” que tenga dos parámetros:
 // Tipo de cliente. Puede ser de dos tipos: “permanente” o “temporal”
@@ -92,6 +115,9 @@ function hacerDescuento(tipoCliente, precio) {
   console.log(hacerDescuento("temporal", 100)); // 20
   console.log(hacerDescuento("otro", 100)); // 0
 //   En este ejemplo se define una función llamada hacerDescuento() que toma dos parámetros: tipoCliente y precio. La función utiliza una estructura condicional para determinar el descuento a aplicar según el tipo de cliente y el precio.
+
+
+
 
 // 6.- Crear una clase Libro
 // Propiedades: ISBN, titulo, autor, paginas
@@ -126,6 +152,10 @@ class Libro {
     console.log(`Ambos libros tienen la misma cantidad de páginas.`);
   }
 //   Este código crea una clase Libro con las propiedades ISBN, titulo, autor y paginas. También se crea un método llamado “informacion” que devuelve una cadena de texto con la información del libro. Luego se crean dos objetos Libro con los valores que se quieran y se muestran por pantalla utilizando el método “informacion”. Por último, se indica cuál de los dos tiene más páginas utilizando una estructura condicional.
+
+
+
+
 
 // 7.- Calcula la letra de un DNI, pediremos el DNI por teclado y nos devolverá el DNI completo. Para calcular la letra, cogeremos el resto de dividir nuestro DNI entre 23, el resultado debe estar entre 0 y 22.
 // Haz un método donde según el resultado de la anterior fórmula busque en un array de caracteres la posición que corresponda a la letra.
